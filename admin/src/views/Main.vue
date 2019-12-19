@@ -1,7 +1,7 @@
 <template>    
 <el-container   style="height: 100vh; border: 1px solid #eee">
   <el-aside   width="200px" style="background-color: rgb(238, 241, 246)">
-    <el-menu  router :default-openeds="['1', '2']">
+    <el-menu  router :default-openeds="['1', '2','3']">
       <el-submenu index="1">
         <template slot="title"><i class="el-icon-message"></i>系统管理</template>
         <el-menu-item-group title="系统">
@@ -14,9 +14,25 @@
         <el-menu-item-group title="运营">
           <el-menu-item index="/supplier">供货商列表</el-menu-item>
         </el-menu-item-group>
-          <el-menu-item index="/goods">商品入库</el-menu-item>
+          <el-menu-item index="/goods">商品入库列表</el-menu-item>
+          <el-menu-item index="/war">商品出库列表</el-menu-item>
       </el-submenu>
-    
+
+       <el-submenu index="3">
+        <template slot="title"><i class="el-icon-message"></i>员工管理</template>
+        <el-menu-item-group title="员工">
+          <el-menu-item index="/staff">员工列表</el-menu-item>
+        </el-menu-item-group>
+          <el-menu-item index="/Punchtneclock">员工打卡</el-menu-item>
+      </el-submenu>
+
+       <el-submenu index="3">
+        <template slot="title"><i class="el-icon-message"></i>商品管理</template>
+        <el-menu-item-group title="员工">
+          <el-menu-item index="/staff">员工列表</el-menu-item>
+        </el-menu-item-group>
+          <el-menu-item index="/Punchtneclock">员工打卡</el-menu-item>
+      </el-submenu>
 
 
     </el-menu>
